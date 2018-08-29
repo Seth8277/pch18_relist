@@ -66,7 +66,7 @@ function pch18_relist_bind()
 
 function pch18_relist_userinit()
 {
-    if (option::uget('pch18_relist_enable') === false)
+    if (option::uget('pch18_relist_enable') === null)
     {
         option::uset('pch18_relist_enable', 1);
     }
@@ -79,5 +79,5 @@ addAction('showtb_set', 'pch18_relist_redate');
 addAction('set_2', 'pch18_relist_setting');
 addAction('navi_2', 'pch18_relist_admin');
 addAction('navi_8', 'pch18_relist_admin');
-addAction('admin_login_2', 'pch18_relist_userinit');
+addAction('baiduid_set', 'pch18_relist_userinit');
 ?>
